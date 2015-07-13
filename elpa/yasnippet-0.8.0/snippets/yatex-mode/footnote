@@ -1,0 +1,3 @@
+#name : footnote
+# --
+\footnote{${1:footnotecontents}} $0

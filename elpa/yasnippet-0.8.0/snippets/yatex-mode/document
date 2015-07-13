@@ -1,0 +1,5 @@
+#name : document(Env)
+# --
+\begin{document}
+  $0
+\end{document}

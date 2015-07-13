@@ -1,0 +1,4 @@
+#name : Gamma
+#condition :  (not (YaTeX-in-math-mode-p))
+# --
+$\Gamma$

@@ -1,0 +1,4 @@
+#name : varsigma
+#condition :  (not (YaTeX-in-math-mode-p))
+# --
+$\varsigma$

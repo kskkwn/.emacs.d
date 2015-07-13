@@ -1,0 +1,4 @@
+#name : flushright(Env)
+# --
+\begin{flushright}$0
+\end{flushright}

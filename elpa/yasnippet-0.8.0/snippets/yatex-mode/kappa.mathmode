@@ -1,0 +1,4 @@
+#name : kappa
+#condition :  (YaTeX-in-math-mode-p)
+# --
+\kappa $0

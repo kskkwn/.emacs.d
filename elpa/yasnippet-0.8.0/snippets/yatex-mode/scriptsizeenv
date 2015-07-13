@@ -1,0 +1,4 @@
+#name : scriptsize(Env)
+# --
+\begin{scriptsize}$0
+\end{scriptsize}

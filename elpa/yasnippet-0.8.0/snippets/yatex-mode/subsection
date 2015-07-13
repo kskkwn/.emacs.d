@@ -1,0 +1,4 @@
+#name : subsection
+# --
+\subsection{${1:title}}
+$0

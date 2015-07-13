@@ -1,0 +1,3 @@
+#name : textmd
+# --
+\textmd{${1:text}} $0

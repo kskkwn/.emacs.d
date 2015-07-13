@@ -1,0 +1,4 @@
+#name : picture(Env)
+# --
+\begin{picture}$0
+\end{picture}

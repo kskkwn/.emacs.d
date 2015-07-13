@@ -1,0 +1,4 @@
+#name : verbatim*(Env)
+# --
+\begin{verbatim*}$0
+\end{verbatim*}

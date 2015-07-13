@@ -1,0 +1,4 @@
+#name : alpha
+#condition :  (YaTeX-in-math-mode-p)
+# --
+\alpha $0

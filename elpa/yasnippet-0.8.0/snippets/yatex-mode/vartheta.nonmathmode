@@ -1,0 +1,4 @@
+#name : vartheta
+#condition :  (not (YaTeX-in-math-mode-p))
+# --
+$\vartheta$

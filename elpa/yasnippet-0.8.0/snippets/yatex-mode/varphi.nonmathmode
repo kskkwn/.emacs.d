@@ -1,0 +1,4 @@
+#name : varphi
+#condition :  (not (YaTeX-in-math-mode-p))
+# --
+$\varphi$

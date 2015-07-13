@@ -1,0 +1,81 @@
+begin beg
+baselinestretch	bls
+bfseries	bfs
+center	cen
+centering	cen.1
+chapter	cha
+cite cit
+description des desc
+document doc
+enumerate enu enum
+eqnarray eqn
+eqnarray\* eqn\*
+equation equ
+equation\* equ\*
+figure fig
+figure.1 fig.1
+flushleft fll
+flushright flr flu
+footnote foo.footnote
+footnotesize fns foo.footnotesize
+footnotesizeenv fooenv
+hfill hfi
+hspace hsp
+hspace\* hsp\*
+huge hug
+huge.1 hug.1
+indent ind
+itemize ite
+itshape its
+label lab
+large lar
+large.1 lar.1
+large.2 lar.2
+largeenv larenv
+largeenv.1 larenv.1
+largeenv.2 larenv.2
+mdseries mds
+noindent noi noind
+normalsize nor
+normalsizeenv norenv
+overline ove
+quotation quo.1
+quote quo
+rmfamily rmf
+scriptsize scr scs
+scriptsizeenv screnv 
+scshape scs.1
+section sec
+section\* sec\*
+sffamily sff
+slshape sls
+small sma
+smallenv smaenv
+subsection ssec sub subsec
+subsection\* ssec\* sub\* subsec\*
+subsubsection sssec subsubsec subsub
+subsubsection\* sssec\* subsubsec\* subsub\*
+tabbing tab.3
+table tabl tab
+table.1 tabl.1 tab.1
+tableofcontents toc
+tabular tabu tab.2
+textbf tbf
+textit tit
+textmd tmd
+textrm trm
+textsc tsc
+textsf tsf
+textsl tsl
+texttt ttt
+textup tup
+tiny tin fontsize.1tiny
+today tod
+ttfamily ttf
+underline und
+upshape ups
+verbatim ver
+verbatim\* ver\*
+vfill vfi
+vspace vsp
+vspace\* vsp\*

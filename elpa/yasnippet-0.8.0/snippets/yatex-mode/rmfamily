@@ -1,0 +1,3 @@
+#name : rmfamily
+# --
+\rmfamily{${1:text}} $0

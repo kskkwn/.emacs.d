@@ -1,0 +1,4 @@
+#name : psi
+#condition :  (not (YaTeX-in-math-mode-p))
+# --
+$\psi$

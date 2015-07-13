@@ -1,0 +1,4 @@
+#name : omega
+#condition :  (not (YaTeX-in-math-mode-p))
+# --
+$\omega$

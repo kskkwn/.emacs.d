@@ -1,0 +1,4 @@
+#name : usepackage
+# --
+\usepackage{${1:package}}
+$0

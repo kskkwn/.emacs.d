@@ -1,0 +1,13 @@
+#!/usr/bin/env ruby
+command = "\"| ln -s \#{basefile} \#{link}\""
+if ARGV[0] == "clean"
+   command = "\"| rm \#{link}\""
+end
+
+open(".yatex_alias_list").each do |line|
+  names = line.split(' ')
+  basefile = names.shift
+  names.each do |link|
+    open eval(command)
+  end
+end

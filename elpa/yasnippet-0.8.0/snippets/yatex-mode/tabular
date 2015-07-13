@@ -1,0 +1,4 @@
+#name : tabular(Env)
+# --
+\begin{tabular}{${1:column setting}}$0
+\end{tabular}

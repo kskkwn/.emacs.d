@@ -1,0 +1,4 @@
+#name : delta
+#condition :  (not (YaTeX-in-math-mode-p))
+# --
+$\delta$

@@ -1,0 +1,4 @@
+#name : lambda
+#condition :  (not (YaTeX-in-math-mode-p))
+# --
+$\lambda$

@@ -1,0 +1,4 @@
+#name : epsilon
+#condition :  (not (YaTeX-in-math-mode-p))
+# --
+$\epsilon$

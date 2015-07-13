@@ -1,0 +1,3 @@
+#name : upshape
+# --
+\upshape{${1:text}} $0

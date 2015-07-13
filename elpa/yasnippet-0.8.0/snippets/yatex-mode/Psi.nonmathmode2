@@ -1,0 +1,4 @@
+#name : Psi
+#condition :  (not (YaTeX-in-math-mode-p))
+# --
+$\Psi$

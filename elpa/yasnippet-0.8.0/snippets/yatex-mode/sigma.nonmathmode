@@ -1,0 +1,4 @@
+#name : sigma
+#condition :  (not (YaTeX-in-math-mode-p))
+# --
+$\sigma$

@@ -1,0 +1,4 @@
+#name : nu
+#condition :  (YaTeX-in-math-mode-p)
+# --
+\nu $0

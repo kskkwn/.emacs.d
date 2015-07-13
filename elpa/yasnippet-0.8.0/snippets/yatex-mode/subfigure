@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: subfigure
+# key: subfigure
+# --
+\begin{figure}[tbp]
+ \centering
+ \subfigure{\includegraphics[clip, width=0.9\columnwidth]{fig/${1:dummy1}.eps} }
+ \subfigure{\includegraphics[clip, width=0.9\columnwidth]{fig/${2:dummy2}.eps} }
+ \subfigure{\includegraphics[clip, width=0.9\columnwidth]{fig/${3:dummy3}.eps} }
+ \caption{${4:c}}
+ \label{fig:$5}
+\end{figure}

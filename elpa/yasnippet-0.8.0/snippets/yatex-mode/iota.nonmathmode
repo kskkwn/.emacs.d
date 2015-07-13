@@ -1,0 +1,4 @@
+#name : iota
+#condition :  (not (YaTeX-in-math-mode-p))
+# --
+$\iota$

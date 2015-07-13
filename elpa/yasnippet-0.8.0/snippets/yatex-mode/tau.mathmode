@@ -1,0 +1,4 @@
+#name : tau
+#condition :  (YaTeX-in-math-mode-p)
+# --
+\tau $0

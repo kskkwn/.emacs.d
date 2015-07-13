@@ -1,0 +1,4 @@
+#name : varrho
+#condition :  (YaTeX-in-math-mode-p)
+# --
+\varrho $0

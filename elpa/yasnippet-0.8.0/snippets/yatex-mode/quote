@@ -1,0 +1,4 @@
+#name : quote(Env)
+# --
+\begin{quote}$0
+\end{quote}

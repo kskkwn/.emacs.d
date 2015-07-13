@@ -1,0 +1,4 @@
+#name : varrho
+#condition :  (not (YaTeX-in-math-mode-p))
+# --
+$\varrho$

@@ -1,0 +1,4 @@
+#name : documentclass
+# --
+\documentclass[$1]{${2:jsarticle}}
+$0

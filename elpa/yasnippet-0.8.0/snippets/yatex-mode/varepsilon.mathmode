@@ -1,0 +1,4 @@
+#name : varepsilon
+#condition :  (YaTeX-in-math-mode-p)
+# --
+\varepsilon $0
