@@ -1,4 +1,0 @@
-#name : varpi
-#condition :  (not (YaTeX-in-math-mode-p))
-# --
-$\varpi$

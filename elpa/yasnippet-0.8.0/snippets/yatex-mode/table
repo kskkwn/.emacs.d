@@ -1,9 +1,0 @@
-#name : table(Env with basic settings)
-# --
-\begin{table}[${1:htb}]
-  \centering
-  \caption{${2:caption of table}}
-  \begin{tabular}{${3:column setting}}$0
-  \end{tabular}
-  \label{${4:label of table}}
-\end{table}

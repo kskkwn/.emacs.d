@@ -4,8 +4,8 @@
 
 ;; Author: SAKURAI Masashi <m.sakurai at kiwanami.net>
 ;; URL: https://github.com/kiwanami/emacs-ctable
-;; Version: 20140304.1659
-;; X-Original-Version: 0.1.2
+;; Package-Version: 20140304.1659
+;; Version: 0.1.2
 ;; Keywords: table
 
 ;; This program is free software; you can redistribute it and/or modify

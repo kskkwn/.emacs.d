@@ -8,12 +8,11 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
     (setq exec-path (split-string path-from-shell path-separator))))
 (set-exec-path-from-shell-PATH)
 
-
 (require 'package)
 ;; MELPAを追加
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 ;; Marmaladeを追加
-(add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/"))
+;(add-to-list 'package-archives  '("marmalade" . "http://marmalade-repo.org/packages/"))
 ;; 初期化
 (package-initialize)
 
@@ -22,12 +21,6 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
   (add-to-list 'load-path default-directory)
   (if (fboundp 'normal-top-level-add-subdirs-to-load-path)
       (normal-top-level-add-subdirs-to-load-path)))
-
-;;(require 'auto-install)
-;;(setq auto-install-directory "~/.emacs.d/site-lisp/")
-;;(auto-install-update-emacswiki-package-name t)
-;;(auto-install-compatibility-setup)
-
 
 
 ;;init-loaderで残りの設定を読み込む
@@ -46,5 +39,3 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 
 ;;~/.emacs.d/inits/ 以下を読み込み
 (init-loader-load "~/.emacs.d/inits")
-
-

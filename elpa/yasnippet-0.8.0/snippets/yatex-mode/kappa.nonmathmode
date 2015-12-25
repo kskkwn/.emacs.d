@@ -1,4 +1,0 @@
-#name : kappa
-#condition :  (not (YaTeX-in-math-mode-p))
-# --
-$\kappa$

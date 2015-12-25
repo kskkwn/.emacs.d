@@ -1,4 +1,0 @@
-#name : frac
-#condition : (not (YaTeX-in-math-mode-p))
-# --
-$\frac{${1:numerator}}{${2:denominator}}$

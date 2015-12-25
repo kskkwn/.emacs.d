@@ -1,9 +1,0 @@
-#name : figdummy
-# --
-\begin{figure}[htbp]
-  \begin{center}
-  \includegraphics[height=40mm]{fig/dummy.eps}
-  \caption{${1:c}}
-  \label{fig:${2:l}}
-	\end{center}
-\end{figure}

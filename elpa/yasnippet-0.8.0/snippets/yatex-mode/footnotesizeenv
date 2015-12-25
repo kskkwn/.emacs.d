@@ -1,4 +1,0 @@
-#name : footnotesize(Env)
-# --
-\begin{footnotesize}$0
-\end{footnotesize}

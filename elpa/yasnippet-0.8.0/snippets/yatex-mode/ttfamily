@@ -1,3 +1,0 @@
-#name : ttfamily
-# --
-\ttfamily{${1:text}} $0

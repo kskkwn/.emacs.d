@@ -1,4 +1,0 @@
-#name : varepsilon
-#condition :  (not (YaTeX-in-math-mode-p))
-# --
-$\varepsilon$

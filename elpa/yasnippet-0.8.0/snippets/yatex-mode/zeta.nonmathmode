@@ -1,4 +1,0 @@
-#name : zeta
-#condition :  (not (YaTeX-in-math-mode-p))
-# --
-$\zeta$

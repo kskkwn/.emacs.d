@@ -1,3 +1,0 @@
-#name : tref
-# --
-Table\ref{tab:${1:label}}$0

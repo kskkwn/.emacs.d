@@ -1,9 +1,10 @@
 ;; ショートカットキー
 ;; C-h で前方消去
 (keyboard-translate ?\C-h ?\C-?)
+(global-set-key (kbd "C-v") 'forward-word)
 
-;; C-q で置換
-(global-set-key "\C-q" 'replace-string)
+;; C-xq で置換
+(global-set-key "\C-xq" 'replace-string)
 
 ;; カーソル位置から行頭のインデントまで削除する "C-o"
 (defun backward-kill-line (arg)
@@ -27,14 +28,23 @@
     (split-window-horizontally))
   (other-window 1))
 (global-set-key [C-tab] 'other-window-or-split)
-(global-set-key "\C-t" 'other-window-or-split) ;;やっぱりC-tにする
 
 ;;S-C-tab で逆方向に移動
 (define-key global-map [S-C-tab]  (lambda () (interactive) (other-window -1)))
 (define-key global-map (kbd "S-C-t")  (lambda () (interactive) (other-window -1)))
 
-;;anythingでファイルリストを検索
-(define-key global-map (kbd "C-:") 'anything-filelist+)
-;;クリップボードの履歴をanythingで検索
-(global-set-key "\M-y" 'anything-show-kill-ring)
-(global-set-key (kbd "C-.") 'anything-do-grep)
+;; ;;anythingでファイルリストを検索
+;; (define-key global-map (kbd "C-:") 'anything-filelist+)
+;; ;;クリップボードの履歴をanythingで検索
+;; (global-set-key "\M-y" 'anything-show-kill-ring)
+;; (global-set-key (kbd "C-.") 'anything-do-grep)
+
+;;タブの切り替え
+ (global-set-key "\C-t" 'tabbar-forward-tab)
+
+(define-key global-map [zenkaku-hankaku] 'toggle-input-method)
+
+;;helm
+(define-key global-map (kbd "C-:") 'helm-mini)
+(define-key global-map (kbd "M-y") 'helm-show-kill-ring)
+(global-set-key (kbd "C-c s") 'helm-ag)

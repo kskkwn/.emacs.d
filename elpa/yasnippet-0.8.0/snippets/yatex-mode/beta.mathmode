@@ -1,4 +1,0 @@
-#name : beta
-#condition :  (YaTeX-in-math-mode-p)
-# --
-\beta $0

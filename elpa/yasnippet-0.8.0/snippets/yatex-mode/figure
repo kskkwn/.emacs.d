@@ -1,8 +1,0 @@
-#name : figure
-# --
-\begin{figure}[tbp]
-  \centering
-  \includegraphics[width=0.9\columnwidth]{fig/${1:dummy}.eps}
-  \caption{${2:c}}
-  \label{fig:$1}
-\end{figure}

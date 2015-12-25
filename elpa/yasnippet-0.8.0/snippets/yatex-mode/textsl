@@ -1,3 +1,0 @@
-#name : textsl
-# --
-\textsl{${1:text}} $0

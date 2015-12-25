@@ -1,4 +1,0 @@
-#name : nu
-#condition :  (not (YaTeX-in-math-mode-p))
-# --
-$\nu$

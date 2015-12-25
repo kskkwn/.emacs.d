@@ -1,4 +1,0 @@
-#name : Xi
-#condition :  (YaTeX-in-math-mode-p)
-# --
-\Xi $0

@@ -1,3 +1,0 @@
-#name : textup
-# --
-\textup{${1:text}} $0

@@ -1,3 +1,0 @@
-#name : scshape
-# --
-\scshape{${1:text}} $0

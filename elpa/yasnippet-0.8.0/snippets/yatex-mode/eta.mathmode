@@ -1,4 +1,0 @@
-#name : eta
-#condition :  (YaTeX-in-math-mode-p)
-# --
-\eta $0

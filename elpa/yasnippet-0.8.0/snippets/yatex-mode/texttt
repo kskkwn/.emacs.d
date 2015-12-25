@@ -1,3 +1,0 @@
-#name : texttt
-# --
-\texttt{${1:text}} $0

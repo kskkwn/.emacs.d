@@ -1,4 +1,0 @@
-#name : Pi
-#condition :  (not (YaTeX-in-math-mode-p))
-# --
-$\Pi$

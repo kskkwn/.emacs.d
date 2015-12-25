@@ -1,4 +1,0 @@
-#name : part
-# --
-\part{${1:title}}
-$0

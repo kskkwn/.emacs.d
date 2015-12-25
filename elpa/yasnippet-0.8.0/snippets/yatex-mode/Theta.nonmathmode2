@@ -1,4 +1,0 @@
-#name : Theta
-#condition :  (not (YaTeX-in-math-mode-p))
-# --
-$\Theta$

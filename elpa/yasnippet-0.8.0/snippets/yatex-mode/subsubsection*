@@ -1,4 +1,0 @@
-#name : subsubsection*
-# --
-\subsubsection*{${1:title}}
-$0

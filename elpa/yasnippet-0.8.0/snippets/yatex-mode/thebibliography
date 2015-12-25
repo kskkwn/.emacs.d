@@ -1,4 +1,0 @@
-#name : thebibliography(Env)
-# --
-\begin{thebibliography}{${1:9}}$0
-\end{thebibliography}

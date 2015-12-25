@@ -1,3 +1,0 @@
-#name : textsf
-# --
-\textsf{${1:text}} $0

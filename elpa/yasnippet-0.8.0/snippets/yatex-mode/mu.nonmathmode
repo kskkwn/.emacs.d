@@ -1,4 +1,0 @@
-#name : mu
-#condition :  (not (YaTeX-in-math-mode-p))
-# --
-$\mu$

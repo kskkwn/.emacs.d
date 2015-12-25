@@ -1,4 +1,0 @@
-#name : chi
-#condition :  (not (YaTeX-in-math-mode-p))
-# --
-$\chi$

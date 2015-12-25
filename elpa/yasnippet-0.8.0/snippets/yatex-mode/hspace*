@@ -1,3 +1,0 @@
-#name : hspace*
-# --
-\hspace*{${1:5mm}} $0

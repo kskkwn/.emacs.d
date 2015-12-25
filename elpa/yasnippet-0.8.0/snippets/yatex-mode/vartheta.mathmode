@@ -1,4 +1,0 @@
-#name : vartheta
-#condition :  (YaTeX-in-math-mode-p)
-# --
-\vartheta $0

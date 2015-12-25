@@ -1,3 +1,0 @@
-#name : baselinestretch
-# --
-¥renewcommand{¥baselinestretch}{${1:scale ratio}}

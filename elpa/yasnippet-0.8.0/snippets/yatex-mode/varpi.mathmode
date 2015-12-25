@@ -1,4 +1,0 @@
-#name : varpi
-#condition :  (YaTeX-in-math-mode-p)
-# --
-\varpi $0

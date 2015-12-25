@@ -1,3 +1,0 @@
-#name : vspace*
-# --
-\vspace*{${1:5mm}} $0

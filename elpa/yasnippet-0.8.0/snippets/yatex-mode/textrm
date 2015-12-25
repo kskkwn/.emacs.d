@@ -1,3 +1,0 @@
-#name : textrm
-# --
-\textrm{${1:text}} $0

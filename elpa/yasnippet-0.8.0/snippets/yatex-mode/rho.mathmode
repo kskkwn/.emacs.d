@@ -1,4 +1,0 @@
-#name : rho
-#condition :  (YaTeX-in-math-mode-p)
-# --
-\rho $0

@@ -1,3 +1,0 @@
-#name : slshape
-# --
-\slshape{${1:text}} $0

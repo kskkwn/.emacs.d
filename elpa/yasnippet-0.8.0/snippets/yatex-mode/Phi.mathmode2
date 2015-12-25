@@ -1,4 +1,0 @@
-#name : Phi
-#condition :  (YaTeX-in-math-mode-p)
-# --
-\Phi $0

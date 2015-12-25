@@ -1,3 +1,0 @@
-#name : fref
-# --
-Fig.\ref{fig:${1:label}}$0

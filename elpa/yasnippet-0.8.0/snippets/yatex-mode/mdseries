@@ -1,3 +1,0 @@
-#name : mdseries
-# --
-\mdseries{${1:text}} $0

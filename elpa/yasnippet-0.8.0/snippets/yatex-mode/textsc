@@ -1,3 +1,0 @@
-#name : textsc
-# --
-\textsc{${1:text}} $0

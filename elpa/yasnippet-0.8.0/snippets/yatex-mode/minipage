@@ -1,5 +1,0 @@
-#name : minipage(Env)
-# --
-\begin{minipage}
-  $0
-\end{minipage}

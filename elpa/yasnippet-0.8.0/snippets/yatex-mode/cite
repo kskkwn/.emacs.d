@@ -1,3 +1,0 @@
-#name : cite
-# --
-\cite{${1:`(reftex-citation)`}} $0

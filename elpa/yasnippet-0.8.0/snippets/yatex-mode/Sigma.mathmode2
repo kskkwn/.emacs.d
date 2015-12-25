@@ -1,4 +1,0 @@
-#name : Sigma
-#condition :  (YaTeX-in-math-mode-p)
-# --
-\Sigma $0

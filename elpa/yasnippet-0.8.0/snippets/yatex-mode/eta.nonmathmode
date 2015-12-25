@@ -1,4 +1,0 @@
-#name : eta
-#condition :  (not (YaTeX-in-math-mode-p))
-# --
-$\eta$

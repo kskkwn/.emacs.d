@@ -1,3 +1,0 @@
-#name : overline
-# --
-\overline{${1:text}} $0
