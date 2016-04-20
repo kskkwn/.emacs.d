@@ -3,6 +3,7 @@
 	     (require 'py-autopep8)
 	     (setq py-autopep8-options '("--max-line-length=200"))
 	     (setq flycheck-flake8-maximum-line-length 200)
+         (py-autopep8-enable-on-save)
 
 	     ;;quick-run
 	     ;;(require 'quickrun)
@@ -10,10 +11,8 @@
 	     ;; ':stick t'の設定をするとよいでしょう
 	     ;;(push '("*quickrun*") popwin:special-display-config)
 
-	     ;; よく使うならキーを割り当てるとよいでしょう
-
-
-	     (defvar jedi:goto-stack '())
+         ;;http://txt.arboreus.com/2013/02/21/jedi.el-jump-to-definition-and-back.html
+  	     (defvar jedi:goto-stack '())
 	     (defun jedi:jump-to-definition ()
 	       (interactive)
 	       (add-to-list 'jedi:goto-stack
@@ -37,8 +36,7 @@
 	     (define-key python-mode-map "{" 'electric-pair)
 	     (define-key python-mode-map "\C-ct" 'jedi:jump-to-definition)
 	     (define-key python-mode-map "\C-cb" 'jedi:jump-back)
-	     (define-key python-mode-map "\C-cr" 'anything-jedi-related-names)
-	     (add-hook 'before-save-hook 'py-autopep8-before-save)
+	     (define-key python-mode-map "\C-cr" 'helm-jedi-related-names)
 	     (auto-complete-mode t)
 	     (flycheck-mode t)
 	     (global-set-key (kbd "C-c C-c") 'quickrun)
@@ -50,7 +48,7 @@
 	     (define-key jedi-mode-map (kbd "C-j") 'jedi:complete)
 	     (define-key jedi-mode-map "." 'jedi:dot-complete) ;;本来は不要．ドットを打っても上手く補完されなかったので追加した．
 	     (setq ac-sources
-		   (delete 'ac-source-words-in-same-mode-buffers 'ac-sources))
+               (delete 'ac-source-words-in-same-mode-buffers 'ac-sources)) ;;jediの補完候補だけでいい
 	     (add-to-list 'ac-sources 'ac-source-jedi-direct)
 
 	     (yas-global-mode 1)

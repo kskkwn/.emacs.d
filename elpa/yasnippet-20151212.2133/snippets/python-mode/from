@@ -1,6 +1,4 @@
-# -*- mode: snippet -*-
-# name: from
-# key: from
-# group : general
+#name : from ... import ...
 # --
-from ${1:lib} import ${2:funs}
+from $1 import $2
+$0

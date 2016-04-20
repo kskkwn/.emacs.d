@@ -62,7 +62,6 @@
 (setq visible-bell t)
 (setq ring-bell-function 'ignore)
 
-
 ;;対応する括弧を挿入
 (defun electric-pair ()
   "Insert character pair without sournding spaces"
@@ -70,8 +69,8 @@
   (let (parens-require-spaces)
     (insert-pair)))
 
-;; ;;複数箇所の同時編集 ublime text的なやつ
-;; (require 'iedit)
+;;複数箇所の同時編集 ublime text的なやつ
+(require 'iedit)
 
 ;; ;; syntaxチェック
 (require 'flycheck)
