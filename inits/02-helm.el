@@ -42,3 +42,19 @@
                                helm-source-emacs-commands
                                )))
 (setq helm-find-files-sort-directories t)
+
+
+;;http://www49.atwiki.jp/ntemacs/pages/32.html
+(setq helm-locate-command
+      ;; (concat "locate_case=$(echo '%s' | sed 's/-//'); cat /tmp/all.filelist |"
+      (concat "locate_case=$(echo '%s' | sed 's/-//'); locate '' |"
+              "perl -ne \"$(echo '%s' |"
+                           "sed -r -e 's/[\\\\ ] /__SpAcE__/g' "
+                                  "-e 's/^ +//' "
+                                  "-e 's/ +$//' "
+                                  "-e 's_/_\\\\&_g' "
+                                  "-e 's_ +_/'$locate_case' \\&\\& m/_g' "
+                                  "-e 's_.*_$| = 1; print if (m/&/'$locate_case')_' "
+                                  "-e 's_m/!_!m/_g' "
+                                  "-e 's/__SpAcE__/ /g')\" 2> /dev/null |"
+              "head -n " (number-to-string helm-candidate-number-limit)))

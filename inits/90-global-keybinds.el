@@ -33,14 +33,6 @@
 (define-key global-map [S-C-tab]  (lambda () (interactive) (other-window -1)))
 (define-key global-map (kbd "S-C-t")  (lambda () (interactive) (other-window -1)))
 
-;; ;;anythingでファイルリストを検索
-;; (define-key global-map (kbd "C-:") 'anything-filelist+)
-(define-key global-map (kbd "C-:") 'helm-filelist+)
-;; ;;クリップボードの履歴をanythingで検索
-;; (global-set-key "\M-y" 'anything-show-kill-ring)
-;; (global-set-key (kbd "C-.") 'anything-do-grep)
-
-
 ;;タブの切り替え
  (global-set-key "\C-t" 'tabbar-forward-tab)
 
