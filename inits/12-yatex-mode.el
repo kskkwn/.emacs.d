@@ -55,3 +55,6 @@
 ;;
 ;;;;RefTeXにおいて数式の引用を\eqrefにする
 ;;(setq reftex-label-alist '((nil ?e nil "~\\eqref{%s}" nil nil)))
+
+;; utf8で書く
+(setq YaTeX-kanji-code 4)

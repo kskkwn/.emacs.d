@@ -37,6 +37,8 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
          (init-loader-error-log (format "%s. %s" (locate-library el) (error-message-string e))) ;追加
          )))))
 
+(setq init-loader-show-log-after-init 'error-only)
+
 ;;~/.emacs.d/inits/ 以下を読み込み
 (init-loader-load "~/.emacs.d/inits")
 
