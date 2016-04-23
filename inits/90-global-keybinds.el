@@ -35,9 +35,12 @@
 
 ;;タブの切り替え
 (global-set-key "\C-t" 'tabbar-forward-tab)
+(define-key global-map (kbd "S-C-t") 'tabbar-backward-tab)
 (add-hook 'dired-mode-hook
       (lambda ()
-        (define-key dired-mode-map (kbd "C-t") 'tabbar-forward-tab)))
+        (define-key dired-mode-map (kbd "C-t") 'tabbar-forward-tab)
+        (define-key global-map (kbd "S-C-t") 'tabbar-backward-tab)))
+
 
 (define-key global-map [zenkaku-hankaku] 'toggle-input-method)
 
