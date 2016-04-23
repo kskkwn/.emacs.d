@@ -3,7 +3,7 @@
 (keyboard-translate ?\C-h ?\C-?)
 (global-set-key (kbd "C-v") 'forward-word)
 
-;; C-q で置換
+;; q-C で置換
 (global-set-key "\C-q" 'replace-string)
 
 ;; カーソル位置から行頭のインデントまで削除する "C-o"
