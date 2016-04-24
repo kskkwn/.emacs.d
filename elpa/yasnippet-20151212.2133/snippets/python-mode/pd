@@ -1,0 +1,7 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: pd
+# key: pd
+# binding: direct-keybinding
+# --
+import pandas as pd
+$0

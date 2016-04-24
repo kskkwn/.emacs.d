@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: plt
+# key: plt
+# --
+import pylab as plt
+$0
