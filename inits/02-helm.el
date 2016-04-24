@@ -1,7 +1,7 @@
 (require 'helm-config)
-(helm-mode 1)
-
 (require 'helm-ag)
+
+(helm-mode 1)
 (setq helm-ag-base-command "ag --nocolor --nogrou")
 
 ;;(add-to-list 'helm-completing-read-handlers-alist '(find-file . nil)) ;;普通にfind fileする
@@ -32,6 +32,7 @@
     :coerce #'intern-soft
     :action #'command-execute)
   "Emacs commands history")
+
 
 (custom-set-variables
  '(helm-mini-default-sources '(helm-source-buffers-list

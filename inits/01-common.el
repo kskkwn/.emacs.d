@@ -52,6 +52,8 @@
 (setq helm-display-function 'my/helm-display-buffer)
 ;;(require 'helm)
 
+
+
 ;; バックアップファイルを作らない
 (setq backup-inhibited t)
 (setq make-backup-files nil)
@@ -63,13 +65,14 @@
 (setq ring-bell-function 'ignore)
 
 ;;対応する括弧を挿入
+;;呼び出しはそれぞれのmodeの設定の中で
 (defun electric-pair ()
   "Insert character pair without sournding spaces"
   (interactive)
   (let (parens-require-spaces)
     (insert-pair)))
 
-;;複数箇所の同時編集 ublime text的なやつ
+;;複数箇所の同時編集 sublime text的なやつ
 (require 'iedit)
 
 ;; ;; syntaxチェック

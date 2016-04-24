@@ -41,6 +41,7 @@
 	     (flycheck-mode t)
 	     (global-set-key (kbd "C-c C-c") 'quickrun)
 
+
 	     ;; jedi
 	     (jedi:setup)
 	     (define-key jedi-mode-map (kbd "<C-tab>") nil) ;;C-tabはウィンドウの移動に用いる
@@ -48,7 +49,8 @@
 	     (define-key jedi-mode-map (kbd "C-j") 'jedi:complete)
 	     (define-key jedi-mode-map "." 'jedi:dot-complete) ;;本来は不要．ドットを打っても上手く補完されなかったので追加した．
 	     (setq ac-sources
-               (delete 'ac-source-words-in-same-mode-buffers 'ac-sources)) ;;jediの補完候補だけでいい
+               (delete 'ac-source-words-in-same-mode-buffers ac-sources)) ;;jediの補完候補だけでいい
+         (add-to-list 'ac-sources 'ac-source-filename)
 	     (add-to-list 'ac-sources 'ac-source-jedi-direct)
 
 	     (yas-global-mode 1)

@@ -3,7 +3,7 @@
 (keyboard-translate ?\C-h ?\C-?)
 (global-set-key (kbd "C-v") 'forward-word)
 
-;; q-C で置換
+;; C-q で置換
 (global-set-key "\C-q" 'replace-string)
 
 ;; カーソル位置から行頭のインデントまで削除する "C-o"
@@ -59,3 +59,4 @@
 (define-key global-map (kbd "M-y") 'helm-show-kill-ring)
 (global-set-key (kbd "C-c s") 'helm-ag)
 (global-set-key (kbd "C-.") 'helm-do-grep-ag)
+
