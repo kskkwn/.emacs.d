@@ -16,6 +16,21 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;; 初期化
 (package-initialize)
 
+;;再起動時に色々復元
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(desktop-save-mode t))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
+
+
 ;; ~/.emacs.d/site-lisp 以下全部読み込み
 (let ((default-directory (expand-file-name "~/.emacs.d/site-lisp")))
   (add-to-list 'load-path default-directory)
@@ -37,24 +52,9 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
          (init-loader-error-log (format "%s. %s" (locate-library el) (error-message-string e))) ;追加
          )))))
 
+;; errorがあるときだけinit-loaderのログを表示する
 (setq init-loader-show-log-after-init 'error-only)
 
 ;;~/.emacs.d/inits/ 以下を読み込み
 (init-loader-load "~/.emacs.d/inits")
 
-;;再起動時に色々復元
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(desktop-save-mode t)
- '(helm-mini-default-sources
-   (quote
-    (helm-source-buffers-list helm-source-recentf helm-source-files-in-current-dir helm-source-emacs-commands-history helm-source-emacs-commands))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
