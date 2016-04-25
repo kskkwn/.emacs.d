@@ -10,3 +10,9 @@
         (auto-fill-mode 1)
         (if (eq window-system 'x)
             (font-lock-mode 1))))
+
+(require 'ac-octave)
+(defun ac-octave-mode-setup ()
+  (setq ac-sources '(ac-source-octave)))
+(add-hook 'octave-mode-hook
+          '(lambda () (ac-octave-mode-setup)))
