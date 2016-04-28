@@ -8,4 +8,5 @@
 ;; 追加メジャーモード
 (add-to-list 'ac-modes 'org-mode)
 (add-to-list 'ac-modes 'cuda-mode)
+(add-to-list 'ac-modes 'octave-mode)
 
