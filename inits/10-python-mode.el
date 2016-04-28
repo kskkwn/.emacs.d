@@ -54,4 +54,8 @@
 	     (add-to-list 'ac-sources 'ac-source-jedi-direct)
 
 	     (yas-global-mode 1)
-	     ))
+
+         ;;errorやwarningを表示する
+         (require 'flymake-python-pyflakes)
+         (flymake-python-pyflakes-load)
+         ))
