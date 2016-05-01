@@ -36,6 +36,7 @@
   (when (one-window-p)
     (split-window-horizontally))
   (other-window 1))
+
 (global-set-key [C-tab] 'other-window-or-split)
 
 ;;S-C-tab で逆方向に移動
@@ -60,3 +61,14 @@
 (global-set-key (kbd "C-c s") 'helm-ag)
 (global-set-key (kbd "C-.") 'helm-do-grep-ag)
 
+;;http://nishikawasasaki.hatenablog.com/entry/20120222/1329932699
+;; dired-find-alternate-file の有効化
+(put 'dired-find-alternate-file 'disabled nil)
+;; RET 標準の dired-find-file では dired バッファが複数作られるので
+;; dired-find-alternate-file を代わりに使う
+(define-key dired-mode-map (kbd "RET") 'dired-find-alternate-file)
+(define-key dired-mode-map (kbd "a") 'dired-find-file)
+
+;; ディレクトリの移動キーを追加(wdired 中は無効)
+(define-key dired-mode-map (kbd "<left>") 'dired-up-directory)
+(define-key dired-mode-map (kbd "<right>") 'dired-open-in-accordance-with-situation)

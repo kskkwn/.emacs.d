@@ -31,6 +31,8 @@
   (set btn (cons (cons "" nil)
                  (cons "" nil))))
 ;; タブ同士の間隔
+;; http://ser1zw.hatenablog.com/entry/2012/12/31/022359
+
 (setq tabbar-separator '(0.8))
 
 (defun my-tabbar-buffer-list ()
@@ -42,7 +44,7 @@
                      ((buffer-file-name b) b)
                      ((char-equal ?\  (aref (buffer-name b) 0)) nil)
 ;;		     ((equal "*scratch*" (buffer-name b)) b) ; *scratch*バッファは表示する
-		     ((equal "*eww*" (buffer-name b)) b) ; *scratch*バッファは表示する
+		     ((equal "*eww*" (buffer-name b)) b) ; *eww*バッファは表示する
 		     ((char-equal ?* (aref (buffer-name b) 0)) nil) ; それ以外の * で始まるバッファは表示しない
                      ((buffer-live-p b) b)))
                 (buffer-list))))
