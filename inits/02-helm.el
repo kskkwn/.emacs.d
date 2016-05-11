@@ -1,3 +1,4 @@
+;; http://d.hatena.ne.jp/a_bicky/20140104/1388822688
 (require 'helm-config)
 (require 'helm-ag)
 

@@ -11,7 +11,7 @@
 	     ;; ':stick t'の設定をするとよいでしょう
 	     ;;(push '("*quickrun*") popwin:special-display-config)
 
-         ;;http://txt.arboreus.com/2013/02/21/jedi.el-jump-to-definition-and-back.html
+         ;; http://txt.arboreus.com/2013/02/21/jedi.el-jump-to-definition-and-back.html
   	     (defvar jedi:goto-stack '())
 	     (defun jedi:jump-to-definition ()
 	       (interactive)

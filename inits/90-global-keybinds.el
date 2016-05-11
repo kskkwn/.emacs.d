@@ -7,6 +7,7 @@
 (global-set-key "\C-q" 'replace-string)
 
 ;; カーソル位置から行頭のインデントまで削除する "C-o"
+;; http://d.hatena.ne.jp/plasticster/20110201/1296581964
 (defun backward-kill-line (arg)
   "Kill chars backward until encountering the end of a line."
   (interactive "p")
@@ -43,7 +44,7 @@
 (define-key global-map [S-C-tab]  (lambda () (interactive) (other-window -1)))
 (define-key global-map (kbd "S-C-t")  (lambda () (interactive) (other-window -1)))
 
-;;タブの切り替え
+;;Tabbarの切り替え
 (global-set-key "\C-t" 'tabbar-forward-tab)
 (define-key global-map (kbd "S-C-t") 'tabbar-backward-tab)
 (add-hook 'dired-mode-hook
@@ -72,3 +73,6 @@
 ;; ディレクトリの移動キーを追加(wdired 中は無効)
 (define-key dired-mode-map (kbd "<left>") 'dired-up-directory)
 (define-key dired-mode-map (kbd "<right>") 'dired-open-in-accordance-with-situation)
+
+;; magit
+(define-key global-map (kbd "C-x g") 'magit-status)

@@ -75,9 +75,10 @@
 ;;複数箇所の同時編集 sublime text的なやつ
 (require 'iedit)
 
-;; ;; syntaxチェック
+;; syntaxチェック
 (require 'flycheck)
 
+;; http://qiita.com/itiut@github/items/4d74da2412a29ef59c3a
 ;;保存時に行末のスペースを削除．文末の改行は削除しない
 (require 'whitespace)
 (set-face-foreground 'whitespace-space "DarkGoldenrod1")

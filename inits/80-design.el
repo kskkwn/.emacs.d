@@ -32,7 +32,6 @@
                  (cons "" nil))))
 ;; タブ同士の間隔
 ;; http://ser1zw.hatenablog.com/entry/2012/12/31/022359
-
 (setq tabbar-separator '(0.8))
 
 (defun my-tabbar-buffer-list ()

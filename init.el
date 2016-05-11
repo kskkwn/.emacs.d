@@ -16,6 +16,7 @@ This is particularly useful under Mac OSX, where GUI apps are not started from a
 ;; 初期化
 (package-initialize)
 
+;; http://lioon.net/emacs-desktop
 ;;再起動時に色々復元
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
