@@ -1,4 +1,6 @@
-#contributor : matt harrison 
-#pdb : import pdb; pdb.set_trace()
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: pdb
+# key: pdb
+# binding: direct-keybinding
 # --
-import pdb; pdb.set_trace()
+from IPython.core.debugger import Pdb as pdb

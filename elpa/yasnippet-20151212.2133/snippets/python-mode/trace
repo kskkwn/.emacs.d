@@ -1,6 +1,6 @@
-# -*- mode: snippet -*-
+# -*- mode: snippet; require-final-newline: nil -*-
 # name: trace
-# key: tr
-# group: debug
+# key: trace
+# binding: direct-keybinding
 # --
-import pdb; pdb.set_trace()
+pdb(color_scheme="Linux").set_trace()
