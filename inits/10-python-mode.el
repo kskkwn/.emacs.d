@@ -39,6 +39,9 @@
 	     (define-key python-mode-map "\C-cr" 'helm-jedi-related-names)
 	     (auto-complete-mode t)
 	     (flycheck-mode t)
+
+
+         (setq python-shell-interpreter "/usr/bin/python")
 	     (global-set-key (kbd "C-c C-c") 'quickrun)
 
 

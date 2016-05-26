@@ -54,6 +54,8 @@
 
 
 
+
+
 ;; バックアップファイルを作らない
 (setq backup-inhibited t)
 (setq make-backup-files nil)
@@ -104,3 +106,4 @@
 (setq-default tab-width 4 indent-tabs-mode nil)
 
 
+(global-anzu-mode 1)

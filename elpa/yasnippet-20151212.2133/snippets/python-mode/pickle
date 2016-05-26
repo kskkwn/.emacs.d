@@ -1,0 +1,6 @@
+# -*- mode: snippet; require-final-newline: nil -*-
+# name: pickle
+# key: pickle
+# binding: direct-keybinding
+# --
+import cPickle as pickle
