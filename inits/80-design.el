@@ -212,7 +212,8 @@ want to use in the modeline *in lieu of* the original.")
       (setq output (concat (car path) "/" output))
       (setq path (cdr path)))
     (when path
-      (setq output (concat ".../" output)))
+;;      (setq output (concat ".../" output)))
+      (setq output (concat "" output)))
     output))
 
 (defun powerline-my-theme ()
