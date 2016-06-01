@@ -60,3 +60,19 @@
                                   "-e 's_m/!_!m/_g' "
                                   "-e 's/__SpAcE__/ /g')\" 2> /dev/null |"
               "head -n " (number-to-string helm-candidate-number-limit)))
+
+
+;;http://d.hatena.ne.jp/a_bicky/20140104/1388822688
+(defadvice helm-ff-transform-fname-for-completion (around my-transform activate)
+  "Transform the pattern to reflect my intention"
+  (let* ((pattern (ad-get-arg 0))
+         (input-pattern (file-name-nondirectory pattern))
+         (dirname (file-name-directory pattern)))
+    (setq input-pattern (replace-regexp-in-string "\\." "\\\\." input-pattern))
+    (setq ad-return-value
+          (concat dirname
+                  (if (string-match "^\\^" input-pattern)
+                      ;; '^' is a pattern for basename
+                      ;; and not required because the directory name is prepended
+                      (substring input-pattern 1)
+                    (concat ".*" input-pattern))))))
