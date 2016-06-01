@@ -15,30 +15,12 @@
 (setq face-font-rescale-alist
       '((".*Hiragino_Mincho_pro.*" . 1.2)))
 
-;; ;;persp mode
-;; ;;http://rubikitch.com/2015/02/13/persp-mode/
-;; (setq persp-keymap-prefix (kbd "C-c p")) ;prefix
-;; (setq persp-add-on-switch-or-display t) ;バッファを切り替えたら見えるようにする
-;; ;;(persp-mode 1)
-;; (defun persp-register-buffers-on-create ()
-;;   (interactive)
-;;   (dolist (bufname (condition-case _
-;;                        (helm-comp-read
-;;                         "Buffers: "
-;;                         (mapcar 'buffer-name (buffer-list))
-;;                         :must-match t
-;;                         :marked-candidates t)
-;;                      (quit nil)))
-;;     (persp-add-buffer (get-buffer bufname))))
-;; (add-hook 'persp-activated-hook 'persp-register-buffers-on-create)
-
 
 ;;tabバーを追加する。
 ; tabbar.el http://cloverrose.hateblo.jp/entry/2013/04/15/183839
 (require 'tabbar)
-(tabbar-mode 1)
 ;; グループ化しない
-(setq tabbar-buffer-groups-function nil)
+;;(setq tabbar-buffer-groups-function nil)
 ;;画像はいらない
 (setq tabbar-use-images nil)
 ;; 左に表示されるボタンを無効化
@@ -47,6 +29,7 @@
                tabbar-scroll-right-button))
   (set btn (cons (cons "" nil)
                  (cons "" nil))))
+
 ;; タブ同士の間隔
 ;; http://ser1zw.hatenablog.com/entry/2012/12/31/022359
 (setq tabbar-separator '(0.8))
@@ -83,8 +66,31 @@
  :background (face-attribute 'mode-line :background)
  :foreground (face-attribute 'mode-line :foreground)
  :box nil)
+(set-face-attribute
+ 'tabbar-modified nil
+ :background (face-attribute 'mode-line-inactive :foreground)
+ :foreground (face-attribute 'mode-line-inactive :background)
+ :box nil)
+
+(setq tabbar-auto-scroll-flag nil)
 
 
+(defun tabbar-buffer-tab-label (tab)
+  "Return a label for TAB.
+That is, a string used to represent it on the tab bar."
+  (let ((label  (if tabbar--buffer-show-groups
+                    (format "[%s] " (tabbar-tab-tabset tab))
+                  (format "%s " (tabbar-tab-value tab)))))
+    ;; Unless the tab bar auto scrolls to keep the selected tab
+    ;; visible, shorten the tab label to keep as many tabs as possible
+    ;; in the visible area of the tab bar.
+    (if tabbar-auto-scroll-flag
+        label
+      (tabbar-shorten
+       label (max 1 (/ (window-width)
+                       (length (tabbar-view
+                                (tabbar-current-tabset)))))))))
+(tabbar-mode 1)
 
 ;;透過の設定
 (when window-system
@@ -158,6 +164,8 @@
     (nxhtml-mode . "nx")
     (helm-mode . "")
     (anzu-mode . "")
+    (flymake-mode . "")
+    (flycheck-mode . "")
     (auto-revert-mode . "")
     (global-whitespace-mode . "")
     )
@@ -268,3 +276,4 @@ want to use in the modeline *in lieu of* the original.")
                              (powerline-render rhs)))))))
 
 (powerline-my-theme)
+
