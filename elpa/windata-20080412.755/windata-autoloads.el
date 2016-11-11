@@ -1,10 +1,9 @@
 ;;; windata-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil "windata" "windata.el" (22141 12411 889256
-;;;;;;  947000))
+;;;### (autoloads nil "windata" "windata.el" (22565 6986 129435 811000))
 ;;; Generated autoloads from windata.el
 
 (autoload 'windata-name-winconf "windata" "\

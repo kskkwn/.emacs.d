@@ -1,41 +1,18 @@
-;; IDEをmozcにする
-(require 'mozc)  ; or (load-file "/path/to/mozc.el")
-(setq default-input-method "japanese-mozc")
+;; 全体に共通する細々大雑把な設定を書く。
+;; ただし、見た目に関しては 90-design.el
+;; キーバインドに関しては91-keybinds.elに書く
 
-;; スタートアップページを表示しない
-(setq inhibit-startup-message t)
+(setq inhibit-startup-message t);; スタートページ表示なし
 (server-start)
-
-;タイトルバーにファイル名を表示
-(setq frame-title-format (format "%%f - Emacs@%s" (system-name)))
-
-;;同名のファイルのバッファ名を変更
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
-
-;;改行時に自動でインデントする
-;;C-mとEnterは同等なので，これでOK
-(global-set-key "\C-m" 'newline-and-indent)
 
 ;;ファイルを開くときに大文字小文字の違いを無視
 (setq read-buffer-completion-ignore-case t)    ;; バッファ名
 (setq read-file-name-completion-ignore-case t) ;; ファイル名
 
-;; 問い合わせを簡略化 yes/no を y/n
-(fset 'yes-or-no-p 'y-or-n-p)
-
-;; C-k で行末の改行も消去
-(setq kill-whole-line t)
-
-;; ￥の代わりにバックスラッシュを入力する
-(define-key global-map [?¥] [?\\])
-
-;;バッファ自動読み込み
-(global-auto-revert-mode 1)
-
-;;同名のファイルのバッファ名を変更
-(require 'uniquify)
-(setq uniquify-buffer-name-style 'post-forward-angle-brackets)
+(fset 'yes-or-no-p 'y-or-n-p) ; 問い合わせを簡略化 yes/no を y/n
+(setq kill-whole-line t) ; C-k で行末の改行も消去
+(define-key global-map [?¥] [?\\]) ; ￥の代わりにバックスラッシュ
+(global-auto-revert-mode 1) ;バッファ自動読み込み
 
 ;;コンパイル画面でスクロールする
 (setq compilation-scroll-output t)
@@ -50,35 +27,28 @@
 (defun my/helm-display-buffer (buffer)
   (apply 'windata-display-buffer buffer helm-windata))
 (setq helm-display-function 'my/helm-display-buffer)
-;;(require 'helm)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; auto complete mode
+(require 'auto-complete)
+(require 'auto-complete-config)
+(setq ac-use-menu-map t)
+(define-key ac-menu-map (kbd "C-n")         'ac-next)
+(define-key ac-menu-map (kbd "C-p")         'ac-previous)
+(global-auto-complete-mode t)
+;; 追加メジャーモード
+(add-to-list 'ac-modes 'org-mode)
+(add-to-list 'ac-modes 'cuda-mode)
+(add-to-list 'ac-modes 'octave-mode)
 
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; magit
+(require 'magit)
+(define-key magit-mode-map (kbd "<C-tab>") nil) ;;C-tabはウィンドウの移動に用いる
 
+;; 対応するカッコを入れる
+(require 'smartparens-config)
 
-
-;; バックアップファイルを作らない
-(setq backup-inhibited t)
-(setq make-backup-files nil)
-;; 終了時にオートセーブファイルを消す
-(setq delete-auto-save-files t)
-
-;;音を鳴らさない
-(setq visible-bell t)
-(setq ring-bell-function 'ignore)
-
-;;対応する括弧を挿入
-;;呼び出しはそれぞれのmodeの設定の中で
-(defun electric-pair ()
-  "Insert character pair without sournding spaces"
-  (interactive)
-  (let (parens-require-spaces)
-    (insert-pair)))
-
-;;複数箇所の同時編集 sublime text的なやつ
-(require 'iedit)
-
-;; syntaxチェック
-(require 'flycheck)
 
 ;; http://qiita.com/itiut@github/items/4d74da2412a29ef59c3a
 ;;保存時に行末のスペースを削除．文末の改行は削除しない
@@ -105,5 +75,28 @@
 ;;タブの代わりにスペースを使う。
 (setq-default tab-width 4 indent-tabs-mode nil)
 
-
+;; 検索時に件数を表示する
 (global-anzu-mode 1)
+
+;; バックアップファイルを作らない
+(setq backup-inhibited t)
+(setq make-backup-files nil)
+;; 終了時にオートセーブファイルを消す
+(setq delete-auto-save-files t)
+
+;; ;;複数箇所の同時編集 sublime text的なやつ
+(require 'iedit)
+(define-key iedit-mode-keymap (kbd "M-p") 'iedit-expand-up-a-line)
+(define-key iedit-mode-keymap (kbd "M-n") 'iedit-expand-down-a-line)
+(define-key iedit-mode-keymap (kbd "M-h") 'iedit-restrict-function)
+(define-key iedit-mode-keymap (kbd "M-i") 'iedit-restrict-current-line)
+
+;;再起動時に色々復元
+(custom-set-variables
+ '(desktop-save-mode t))
+(custom-set-faces)
+
+
+;; yasnippet
+(require 'yasnippet)
+(yas-global-mode 1)

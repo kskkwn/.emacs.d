@@ -1,10 +1,10 @@
 ;;; flymake-python-pyflakes-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
 ;;;### (autoloads nil "flymake-python-pyflakes" "flymake-python-pyflakes.el"
-;;;;;;  (22305 63829 245549 497000))
+;;;;;;  (22565 9083 201465 445000))
 ;;; Generated autoloads from flymake-python-pyflakes.el
 
 (autoload 'flymake-python-pyflakes-load "flymake-python-pyflakes" "\

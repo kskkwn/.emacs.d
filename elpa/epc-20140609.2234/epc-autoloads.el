@@ -1,10 +1,10 @@
 ;;; epc-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
+(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
 
-;;;### (autoloads nil nil ("epc-pkg.el" "epc.el" "epcs.el") (22141
-;;;;;;  13591 952855 559000))
+;;;### (autoloads nil nil ("epc-pkg.el" "epc.el" "epcs.el") (22565
+;;;;;;  5656 113417 16000))
 
 ;;;***
 
