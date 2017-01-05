@@ -1,9 +1,7 @@
-;; 全体に共通する細々大雑把な設定を書く。
-;; ただし、見た目に関しては 90-design.el
-;; キーバインドに関しては91-keybinds.elに書く
-
-(setq inhibit-startup-message t);; スタートページ表示なし
 (server-start)
+
+(exec-path-from-shell-initialize)
+
 
 ;;ファイルを開くときに大文字小文字の違いを無視
 (setq read-buffer-completion-ignore-case t)    ;; バッファ名
@@ -84,13 +82,6 @@
 ;; 終了時にオートセーブファイルを消す
 (setq delete-auto-save-files t)
 
-;; ;;複数箇所の同時編集 sublime text的なやつ
-(require 'iedit)
-(define-key iedit-mode-keymap (kbd "M-p") 'iedit-expand-up-a-line)
-(define-key iedit-mode-keymap (kbd "M-n") 'iedit-expand-down-a-line)
-(define-key iedit-mode-keymap (kbd "M-h") 'iedit-restrict-function)
-(define-key iedit-mode-keymap (kbd "M-i") 'iedit-restrict-current-line)
-
 ;;再起動時に色々復元
 (custom-set-variables
  '(desktop-save-mode t))
@@ -99,4 +90,12 @@
 
 ;; yasnippet
 (require 'yasnippet)
+(setq yas-snippet-dirs
+      '("~/.emacs.d/snippets" ;; 作成するスニペットはここに入る
+        ))
 (yas-global-mode 1)
+
+;;
+(smooth-scrolling-mode)
+
+
