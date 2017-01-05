@@ -94,5 +94,12 @@
 
 (define-key global-map (kbd "C-x C-k") 'fixup-whitespace)
 
-
 (define-key global-map [(insert)] nil)
+
+(define-key global-map (kbd "C-x j") 'open-junk-file)
+
+(define-key global-map (kbd "C-x C-n")
+  (lambda () (interactive)
+    (switch-to-buffer (find-file-noselect "~/note.md"))
+    ))
+
