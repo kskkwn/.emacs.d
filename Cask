@@ -63,6 +63,8 @@
 
 (depends-on "highlight-parentheses")
 (depends-on "open-junk-file")
+
 (depends-on "markdown-preview-mode")
+(depends-on "markdown-toc")
 
 (depends-on "flymd")
