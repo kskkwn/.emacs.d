@@ -35,4 +35,5 @@
     (my-python-mode-setup)
     (set-python-keybinds)
     ;;(highlight-indent-guides-mode)
-    (smartparens-mode)))
+    (smartparens-mode)
+    ))

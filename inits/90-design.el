@@ -1,4 +1,5 @@
 ;;(load-theme 'gruvbox t)
+;;(load-theme 'monokai t)
 (load-theme 'darktooth t)
 
 ;;透過の設定

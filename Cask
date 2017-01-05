@@ -19,7 +19,6 @@
 (depends-on "popwin")
 (depends-on "prodigy")
 (depends-on "projectile")
-(depends-on "s")
 (depends-on "smartparens")
 (depends-on "smex")
 (depends-on "use-package")
@@ -44,8 +43,11 @@
 (depends-on "stan-mode")
 (depends-on "windata")
 (depends-on "switch-window")
+
 (depends-on "gruvbox-theme")
 (depends-on "darktooth-theme")
+(depends-on "monokai-theme")
+
 (depends-on "init-loader")
 (depends-on "auto-complete")
 (depends-on "powerline")
@@ -58,3 +60,6 @@
 (depends-on "highlight-indent-guides")
 
 (depends-on "auctex")
+
+(depends-on "highlight-parentheses")
+(depends-on "open-junk-file")

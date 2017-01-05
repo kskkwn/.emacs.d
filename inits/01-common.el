@@ -98,4 +98,6 @@
 ;;
 (smooth-scrolling-mode)
 
-
+(smartparens-global-mode)
+(global-highlight-parentheses-mode)
+;;(global-git-gutter-mode)
