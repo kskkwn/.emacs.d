@@ -1,3 +1,5 @@
+(require 'org)
+
 (defun my-flymd-browser-function (url)
   (let ((browse-url-browser-function 'browse-url-firefox))
     (browse-url url)))

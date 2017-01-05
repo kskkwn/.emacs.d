@@ -183,3 +183,11 @@ That is, a string used to represent it on the tab bar."
 
 ;;インデントの可視化
 (setq highlight-indent-guides-method 'character)
+
+;; git gutterの色
+(set-face-background 'git-gutter:modified "#D3869B") ;; background color
+(set-face-background 'git-gutter:added "#B8BB26")
+(set-face-background 'git-gutter:deleted "#FB4934")
+(set-face-foreground 'git-gutter:modified "#D3869B") ;; background color
+(set-face-foreground 'git-gutter:added "#B8BB26")
+(set-face-foreground 'git-gutter:deleted "#FB4934")

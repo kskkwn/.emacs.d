@@ -29,6 +29,7 @@
 (depends-on "anzu")
 (depends-on "magit")
 (depends-on "git-gutter")
+(depends-on "git-gutter-fringe")
 (depends-on "yatex")
 (depends-on "magic-latex-buffer")
 (depends-on "py-autopep8")
