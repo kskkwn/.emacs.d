@@ -103,3 +103,13 @@
     (switch-to-buffer (find-file-noselect "~/note.md"))
     ))
 
+;; http://qiita.com/alpha22jp/items/39fbb99fc386628ea8ff
+(define-key iedit-mode-keymap (kbd "C-m") 'iedit-toggle-selection)
+(define-key iedit-mode-keymap (kbd "M-p") 'iedit-expand-up-a-line)
+(define-key iedit-mode-keymap (kbd "M-n") 'iedit-expand-down-a-line)
+(define-key iedit-mode-keymap (kbd "M-h") 'iedit-restrict-function)
+(define-key iedit-mode-keymap (kbd "M-i") 'iedit-restrict-current-line)
+
+
+(global-set-key [zenkaku-hankaku] 'toggle-input-method)
+

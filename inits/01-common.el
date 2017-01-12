@@ -95,12 +95,17 @@
         ))
 (yas-global-mode 1)
 
-;;
 (smooth-scrolling-mode)
 
 (smartparens-global-mode)
 (global-highlight-parentheses-mode)
-;;(global-git-gutter-mode)
+;(global-git-gutter-mode)
 
 (require 'git-gutter-fringe)
 (global-git-gutter-mode)
+
+(require 'iedit)
+
+(require 'mozc)
+(set-language-environment "Japanese")
+(setq default-input-method "japanese-mozc")
