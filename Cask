@@ -69,3 +69,7 @@
 (depends-on "markdown-toc")
 
 (depends-on "flymd")
+(depends-on "iedit")
+
+(depends-on "mozc")
+
