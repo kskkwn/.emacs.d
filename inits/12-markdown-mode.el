@@ -15,4 +15,5 @@
           #'(lambda()
               (add-hook 'after-save-hook 'cleanup-org-tables  nil 'make-it-local)
               (setq flymd-browser-open-function 'my-flymd-browser-function)
+              (set (make-local-variable 'whitespace-action) nil)
               ))

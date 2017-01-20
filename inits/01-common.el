@@ -55,10 +55,10 @@
 (set-face-background 'whitespace-space nil)
 (set-face-bold-p 'whitespace-space t)
 (setq whitespace-style '(tabs           ; タブ
-			 trailing       ; 行末
+                         trailing       ; 行末
                          spaces         ; スペース
                          space-mark     ; 表示のマッピング
-;;                         tab-mark
+                         ;;                         tab-mark
                          ))
 (setq whitespace-action '(auto-cleanup))
 (global-whitespace-mode 1)
