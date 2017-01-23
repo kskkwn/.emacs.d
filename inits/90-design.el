@@ -189,8 +189,8 @@ That is, a string used to represent it on the tab bar."
 
 ;; git gutterの色 for darktooth mode
 (set-face-background 'git-gutter:modified "#B8BB26")
-(set-face-background 'git-gutter:added "#00AAAA")
+(set-face-background 'git-gutter:added "#5f8787")
 (set-face-background 'git-gutter:deleted "#FB4934")
 (set-face-foreground 'git-gutter:modified "#B8BB26")
-(set-face-foreground 'git-gutter:added "#00AAAA")
+(set-face-foreground 'git-gutter:added "#5f8787")
 (set-face-foreground 'git-gutter:deleted "#FB4934")
