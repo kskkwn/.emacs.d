@@ -5,6 +5,7 @@
     (magic-latex-buffer)
     (reftex-mode t)
     (smartparens-mode)
+    (LaTeX-math-mode t)
     ))
 
 
