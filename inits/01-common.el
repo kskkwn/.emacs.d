@@ -103,6 +103,8 @@
 
 (require 'git-gutter-fringe)
 (global-git-gutter-mode)
+(setq git-gutter:update-hooks '(after-save-hook after-revert-hook))
+
 
 (require 'iedit)
 
