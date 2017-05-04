@@ -54,7 +54,6 @@
 (setq show-paren-delay 0.05) ;; default: 0.125
 
 
-
 ;タイトルバーにファイル名を表示
 (setq frame-title-format (format "%%f" (system-name)))
 
@@ -62,25 +61,12 @@
 (require 'uniquify)
 (setq uniquify-buffer-name-style 'post-forward-angle-brackets)
 
-;;文字サイズ
-(set-face-attribute 'default nil
-                    :height 115 )    ;; font size
-
-;; Japanese font
-(set-fontset-font t 'japanese-jisx0208 (font-spec :family "IPAExGothic"))
-
-;; 日本語
-;; (set-fontset-font
-;;  nil 'japanese-jisx0208
-;;  (font-spec :family "Hiragino Mincho Pro")) ;; font
-;;  (font-spec :family "Hiragino Kaku Gothic ProN")) ;; font
-
-;; 半角と全角の比を1:2に
- (setq face-font-rescale-alist
-       '((".*Hiragino_Mincho_pro.*" . 1.2)))
+;;
+;;Font設定
+(set-frame-font "ricty-12")
 
 ;;起動時にウィンドウを最大化する
-(set-frame-parameter nil 'fullscreen 'maximized)
+;;(set-frame-parameter nil 'fullscreen 'maximized)
 
 
 ;; power line
@@ -90,7 +76,7 @@
 
 (require 'diminish)
 (diminish 'abbrev-mode "")
-(diminish 'auto-complete-mode "")
+;;(diminish 'auto-complete-mode "")
 (diminish 'yas-minor-mode "")
 (diminish 'paredit-mode "")
 (diminish 'eldoc-mode "")
