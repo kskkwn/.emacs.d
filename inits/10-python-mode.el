@@ -1,6 +1,10 @@
 (defun my-jedi-mode-setup ()
-  (jedi:setup)
+  (require 'jedi-core)
   (setq jedi:complete-on-dot t)
+  (setq jedi:use-shortcuts t)
+  (add-hook 'python-mode-hook 'jedi:setup)
+  (add-to-list 'company-backends 'company-jedi) ; backendに追加
+
   (setq ac-sources
 	(delete 'ac-source-words-in-same-mode-buffers ac-sources)) ;;jediの補完候補だけでいい
   (add-to-list 'ac-sources 'ac-source-filename)
@@ -17,7 +21,6 @@
   (flymake-python-pyflakes-load)
 
   (yas-global-mode 1)
-  (auto-complete-mode t)
   )
 
 (defun set-python-keybinds ()
