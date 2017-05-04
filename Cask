@@ -24,6 +24,9 @@
 (depends-on "use-package")
 (depends-on "web-mode")
 (depends-on "yasnippet")
+(depends-on "company")
+(depends-on "company-jedi")
+(depends-on "company-quickhelp")
 
 
 (depends-on "anzu")
@@ -50,7 +53,6 @@
 (depends-on "monokai-theme")
 
 (depends-on "init-loader")
-(depends-on "auto-complete")
 (depends-on "powerline")
 (depends-on "smooth-scrolling")
 
@@ -72,4 +74,6 @@
 (depends-on "iedit")
 
 (depends-on "mozc")
+
+(depends-on "irony")
 

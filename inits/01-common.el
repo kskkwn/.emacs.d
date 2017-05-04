@@ -27,17 +27,31 @@
 (setq helm-display-function 'my/helm-display-buffer)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; auto complete mode
-(require 'auto-complete)
-(require 'auto-complete-config)
-(setq ac-use-menu-map t)
-(define-key ac-menu-map (kbd "C-n")         'ac-next)
-(define-key ac-menu-map (kbd "C-p")         'ac-previous)
-(global-auto-complete-mode t)
-;; 追加メジャーモード
-(add-to-list 'ac-modes 'org-mode)
-(add-to-list 'ac-modes 'cuda-mode)
-(add-to-list 'ac-modes 'octave-mode)
+;; company mode http://qiita.com/sune2/items/b73037f9e85962f5afb7
+(global-company-mode +1)
+(custom-set-variables
+ '(company-idle-delay 0))
+(setq company-minimum-prefix-length 2) ; デフォルトは4
+(setq company-selection-wrap-around t) ; 候補の一番下でさらに下に行こうとすると一番上に戻る
+(company-quickhelp-mode +1)
+
+(global-set-key (kbd "C-M-i") 'company-complete)
+
+;; C-n, C-pで補完候補を次/前の候補を選択
+(define-key company-active-map (kbd "C-n") 'company-select-next)
+(define-key company-active-map (kbd "C-p") 'company-select-previous)
+(define-key company-search-map (kbd "C-n") 'company-select-next)
+(define-key company-search-map (kbd "C-p") 'company-select-previous)
+
+;; C-sで絞り込む
+(define-key company-active-map (kbd "C-s") 'company-filter-candidates)
+
+;; TABで候補を設定
+(define-key company-active-map (kbd "C-i") 'company-complete-selection)
+
+;; 各種メジャーモードでも C-M-iで company-modeの補完を使う
+(define-key emacs-lisp-mode-map (kbd "C-M-i") 'company-complete)
+
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; magit
