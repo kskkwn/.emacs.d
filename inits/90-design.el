@@ -63,7 +63,12 @@
 
 ;;
 ;;Font設定
-(set-frame-font "ricty-12")
+(let ((result (ignore-errors
+                (set-frame-font "ricty-12")
+                t)))
+  (unless result
+    ))
+;;(set-frame-font "ricty-12")
 
 ;;起動時にウィンドウを最大化する
 ;;(set-frame-parameter nil 'fullscreen 'maximized)
