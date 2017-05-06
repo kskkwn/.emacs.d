@@ -76,4 +76,4 @@
 (depends-on "mozc")
 
 (depends-on "irony")
-
+(depends-on "highlight-numbers")

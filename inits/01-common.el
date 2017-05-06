@@ -28,11 +28,14 @@
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; company mode http://qiita.com/sune2/items/b73037f9e85962f5afb7
+;;(require 'company)
 (global-company-mode +1)
 (custom-set-variables
  '(company-idle-delay 0))
 (setq company-minimum-prefix-length 2) ; デフォルトは4
 (setq company-selection-wrap-around t) ; 候補の一番下でさらに下に行こうとすると一番上に戻る
+
+(require 'company-quickhelp)
 (company-quickhelp-mode +1)
 
 (global-set-key (kbd "C-M-i") 'company-complete)
@@ -125,3 +128,6 @@
 (require 'mozc)
 (set-language-environment "Japanese")
 (setq default-input-method "japanese-mozc")
+
+(require 'highlight-numbers)
+(highlight-numbers-mode t)
