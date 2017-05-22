@@ -83,13 +83,11 @@
   (interactive)
   (split-window-vertically)
   (other-window 1 nil)
-  (switch-to-next-buffer)
   )
 (defun hsplit-last-buffer ()
   (interactive)
   (split-window-horizontally)
   (other-window 1 nil)
-  (switch-to-next-buffer)
   )
 
 

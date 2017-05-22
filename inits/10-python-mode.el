@@ -24,9 +24,7 @@
            ("C-c t" . jedi:goto-definition)
            ("C-c b" . jedi:goto-definition-pop-marker)
            ("C-c r" . helm-jedi-related-names)
-           ("C-c C-c" . quickrun))
-  (unbind-key :map jedi-mode-map
-              ("<C-tab>")))
+           ("C-c C-c" . quickrun)))
 
 (add-hook
  'python-mode-hook
