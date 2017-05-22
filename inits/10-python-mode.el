@@ -15,7 +15,7 @@
   (flymake-mode t)
   (require 'flymake-python-pyflakes)
   (flymake-python-pyflakes-load)
-
+  (highlight-numbers-mode t)
   (yas-global-mode 1)
   )
 
