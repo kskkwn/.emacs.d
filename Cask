@@ -18,6 +18,8 @@
 (depends-on "smartparens")
 
 (depends-on "powerline")
+(depends-on "smart-mode-line")
+
 (depends-on "diminish")
 (depends-on "popwin")
 (depends-on "windata")

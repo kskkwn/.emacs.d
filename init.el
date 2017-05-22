@@ -1,6 +1,7 @@
 ;; alias emacs="emacsclient -n"
-
 (package-initialize)
+
+(add-to-list 'load-path "~/.emacs.d/lisp/perspeen")
 
 (require 'cask "~/.cask/cask.el")
 (cask-initialize)
@@ -10,3 +11,4 @@
 ;; errorがあるときだけログ表示
 (setq init-loader-show-log-after-init 'error-only)
 (init-loader-load "~/.emacs.d/inits")
+

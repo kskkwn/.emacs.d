@@ -32,6 +32,8 @@
  (setq hl-line-face 'hlline-face)
 (global-hl-line-mode)
 
+(set-cursor-color "DarkOrange")
+
 ;;
 (require 'highlight-numbers)
 (highlight-numbers-mode t)
@@ -49,26 +51,27 @@
 
 ;;Font設定
 (let ((result (ignore-errors
-                (set-frame-font "ricty-12")
+                (set-frame-font "ricty-13.5")
                 t)))
   (unless result
     ))
 
-;; power line
-(require 'powerline)
-(powerline-default-theme)
+;; smart mode line
+(sml/setup)
+(setq sml/theme 'dark)
 
+;;ワークスペースとタブ
+(require 'perspeen)
+(setq perspeen-use-tab t)
+(perspeen-mode)
+
+
+;; TODO あんまり消えてないのでどうにかする
 (require 'diminish)
-(diminish 'abbrev-mode "")
-;;(diminish 'auto-complete-mode "")
 (diminish 'yas-minor-mode "")
 (diminish 'paredit-mode "")
 (diminish 'eldoc-mode "")
-(diminish 'abbrev-mode "")
-(diminish  "λ" 'lisp-interaction-mode)
 (diminish 'hi-lock-mode)
-(diminish "Py" 'Python-mode)
-(diminish "EL" 'emacs-lisp-mode)
 (diminish 'helm-mode "")
 (diminish 'anzu-mode "")
 (diminish 'flymake-mode "")
@@ -77,7 +80,11 @@
 (diminish 'global-git-gutter-mode "")
 (diminish 'git-gutter-mode "")
 (diminish 'auto-revert-mode)
-;; (diminish 'global-whitespace-mode  "")
+(diminish 'lisp-interaction-mode)
+(diminish 'Python-mode)
+(diminish 'emacs-lisp-mode "")
+(diminish 'company-mode)
+(diminish 'hl-line-mode "")
 
 ;;インデントの可視化
 (setq highlight-indent-guides-method 'character)
