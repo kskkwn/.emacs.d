@@ -1,5 +1,3 @@
-;; only global key bindings
-
 (require 'bind-key)
 
 ;; global
@@ -12,7 +10,7 @@
 
 (bind-key* "C-h" 'backward-delete-char)
 (bind-key "C-m" 'newline-and-indent) ;; also Enter-key binds
-(bind-key "C-q" 'replace-string)
+(bind-key "C-t" 'anzu-query-replace-regexp)
 (bind-key "C-o" 'backward-kill-line)
 (bind-key "C-a" 'my-move-beginning-of-line)
 
@@ -20,6 +18,10 @@
 (bind-key "<C-S-iso-lefttab>" (lambda () (interactive) (other-window -1))) ;;reverse
 
 (bind-key "C-x j" 'open-junk-file)
+
+;; perspeen
+(bind-key "C-z C-d" 'perspeen-tab-del)
+(bind-key "C-q" 'perspeen-tab-next)
 
 ;; helm
 (bind-keys
