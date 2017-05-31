@@ -4,6 +4,7 @@
     (flycheck-mode t)
     (my-irony-mode)
     (highlight-numbers-mode t)
+    (company-mode t)
     ))
 
 (defun my-irony-mode ()

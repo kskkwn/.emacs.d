@@ -5,6 +5,9 @@
 (unless (server-running-p)
   (server-start))
 
+;; スタートページを非表示
+(setq inhibit-startup-message t)
+
 ;; http://yohshiy.blog.fc2.com/blog-entry-319.html
 (setq make-backup-files nil)
 (setq delete-auto-save-files t)
@@ -89,7 +92,6 @@
 
 ;; company mode http://qiita.com/sune2/items/b73037f9e85962f5afb7
 (require 'company)
-(global-company-mode +1)
 (custom-set-variables
  '(company-idle-delay 0))
 (setq company-minimum-prefix-length 2) ; デフォルトは4
@@ -97,3 +99,16 @@
 
 (require 'company-quickhelp)
 (company-quickhelp-mode +1)
+
+
+;; perspeen
+(require 'perspeen)
+(perspeen-mode)
+
+(custom-set-faces
+ '(perspeen-selected-face
+   ((t (:weight bold :foreground "#ff8700")))
+   ))
+
+(require 'helm-perspeen)
+

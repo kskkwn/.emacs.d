@@ -6,6 +6,7 @@
 (depends-on "gruvbox-theme")
 (depends-on "helm")
 (depends-on "helm-ag")
+
 (depends-on "init-loader")
 (depends-on "server")
 (depends-on "bind-key")
@@ -39,7 +40,6 @@
 
 (depends-on "undohist")
 
-
 (depends-on "auctex")
 (depends-on "magic-latex-buffer")
 
@@ -55,3 +55,5 @@
 (depends-on "flymake-cursor")
 (depends-on "flymake-python-pyflakes")
 
+(depends-on "perspeen")
+(depends-on "helm-perspeen")

@@ -60,10 +60,7 @@
 (sml/setup)
 (setq sml/theme 'dark)
 
-;;ワークスペースとタブ
-(require 'perspeen)
-(setq perspeen-use-tab t)
-(perspeen-mode)
+
 
 
 ;; TODO あんまり消えてないのでどうにかする
