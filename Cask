@@ -57,3 +57,5 @@
 
 (depends-on "perspeen")
 (depends-on "helm-perspeen")
+
+(depends-on "csv-mode")
