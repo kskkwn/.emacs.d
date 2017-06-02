@@ -18,4 +18,5 @@
               (set (make-local-variable 'whitespace-action) nil)
 
               (highlight-numbers-mode t)
+              (company-mode -1)
               ))

@@ -7,6 +7,7 @@
     (reftex-mode t)
     (smartparens-mode)
     (LaTeX-math-mode t)
+    (company-mode -1)
     ))
 
 

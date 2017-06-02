@@ -33,5 +33,4 @@
     (my-python-mode-setup)
     (set-python-keybinds)
     (smartparens-mode)
-    (company-mode)
     ))
