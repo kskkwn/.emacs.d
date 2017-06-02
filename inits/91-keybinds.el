@@ -21,7 +21,8 @@
 
 ;; perspeen
 (bind-key "C-z C-d" 'perspeen-tab-del)
-(bind-key "C-q" 'helm-perspeen)
+;;(bind-key "C-q" 'helm-perspeen)
+(bind-key "C-q" 'perspeen-next-ws)
 
 
 ;; helm
