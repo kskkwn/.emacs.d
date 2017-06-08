@@ -58,4 +58,5 @@
 (depends-on "perspeen")
 (depends-on "helm-perspeen")
 
-(depends-on "csv-mode")
+(depends-on "ox-reveal")
+(depends-on "org-download")
