@@ -34,10 +34,6 @@
 
 (set-cursor-color "DarkOrange")
 
-;;
-(require 'highlight-numbers)
-(highlight-numbers-mode t)
-
 
 ;; リージョン指定，括弧対応に色をつける
 (setq transient-mark-mode t)

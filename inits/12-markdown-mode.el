@@ -17,6 +17,6 @@
               (setq flymd-browser-open-function 'my-flymd-browser-function)
               (set (make-local-variable 'whitespace-action) nil)
 
-              (highlight-numbers-mode t)
+              (highlight-numbers-mode -1)
               (company-mode -1)
               ))
