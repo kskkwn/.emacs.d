@@ -59,3 +59,7 @@
 (depends-on "helm-perspeen")
 
 (depends-on "ox-reveal")
+<<<<<<< HEAD
+=======
+(depends-on "org-download")
+>>>>>>> e3869f64e87568c13ad068b78f970a247e9d8848
