@@ -1,3 +1,4 @@
+
 (require 'bind-key)
 
 ;; global
@@ -10,7 +11,8 @@
 
 (bind-key* "C-h" 'backward-delete-char)
 (bind-key "C-m" 'newline-and-indent) ;; also Enter-key binds
-(bind-key "C-t" 'anzu-query-replace-regexp)
+(bind-key "C-t" 'replace-string)
+(bind-key "C-S-t" 'anzu-query-replace-regexp)
 (bind-key "C-o" 'backward-kill-line)
 (bind-key "C-a" 'my-move-beginning-of-line)
 
