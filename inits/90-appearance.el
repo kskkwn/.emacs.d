@@ -55,6 +55,10 @@
                 t)))
   (unless result
     ))
+;; ギリシャ文字
+(set-fontset-font
+ 'nil '(#x0370 . #x03FF) (font-spec :family "Ubuntu Mono" :height 100))
+
 
 ;; smart mode line
 (sml/setup)
