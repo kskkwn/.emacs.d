@@ -26,7 +26,9 @@
 
 ;; undoの履歴をウィンドウを閉じても保持する
 (when (require 'undohist nil t)
-  (undohist-initialize))
+  (undohist-initialize)
+  (setq undohist-ignored-files '("/tmp" "/EDITMSG" "/elpa"))
+)
 
 ;;compileとかでウィンドウ構成がこわれないようにする
 (require 'windata)
