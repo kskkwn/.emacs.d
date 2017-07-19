@@ -8,8 +8,8 @@
 
 (defun my-python-mode-setup ()
   (require 'py-autopep8)
-  (setq py-autopep8-options '("--max-line-length=200"))
-  (setq py-autopep8-options '("--ignore=E731"))
+  (setq py-autopep8-options '("--max-line-length=200", "--ignore=E731"))
+  ;;  (setq py-autopep8-options '("--ignore=E731"))
   (py-autopep8-enable-on-save)
 
   ;;errorやwarningを表示する
