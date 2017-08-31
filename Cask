@@ -61,3 +61,6 @@
 (depends-on "ox-reveal")
 
 (depends-on "org-download")
+
+(depends-on "cursor-chg")
+(depends-on "ess")
