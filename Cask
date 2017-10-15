@@ -64,3 +64,5 @@
 
 (depends-on "cursor-chg")
 (depends-on "ess")
+
+(depends-on "atomic-chrome")
