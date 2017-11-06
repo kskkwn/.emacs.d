@@ -130,3 +130,4 @@
     )
   (other-window 1))
 
+(bind-key* "C-x C-s" 'save-buffer) ;; Atomic Chromeでも保存する
