@@ -23,7 +23,6 @@
 
 (depends-on "diminish")
 (depends-on "popwin")
-(depends-on "windata")
 
 
 (depends-on "magit")
@@ -58,11 +57,8 @@
 (depends-on "perspeen")
 (depends-on "helm-perspeen")
 
-(depends-on "ox-reveal")
-
 (depends-on "org-download")
-
-(depends-on "cursor-chg")
 (depends-on "ess")
 
 (depends-on "atomic-chrome")
+(depends-on "undo-tree")

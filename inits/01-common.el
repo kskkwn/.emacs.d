@@ -30,13 +30,6 @@
   (setq undohist-ignored-files '("/tmp" "/EDITMSG" "/elpa"))
 )
 
-;;compileとかでウィンドウ構成がこわれないようにする
-(require 'windata)
-(setq helm-windata '(frame bottom 0.3 nil))
-(defun my/helm-display-buffer (buffer)
-  (apply 'windata-display-buffer buffer helm-windata))
-(setq helm-display-function 'my/helm-display-buffer)
-
 (require 'magit)
 (define-key magit-mode-map (kbd "<C-tab>") nil) ;;C-tabはウィンドウの移動に用いる
 
@@ -114,4 +107,7 @@
    ))
 
 (require 'helm-perspeen)
+
+;; 音を出さない
+(setq ring-bell-function 'ignore)
 
