@@ -4,6 +4,7 @@
 ;; global
 (bind-key "C-x C-c" 'kill-some-buffers) ;; emacs will never die
 (unbind-key "C-z") ;; no minimize
+(unbind-key "C-x C-z") ;; no minimize
 (unbind-key "<insert>")
 
 (bind-key "C-x 2" 'vsplit-last-buffer)

@@ -32,7 +32,13 @@
  (setq hl-line-face 'hlline-face)
 (global-hl-line-mode)
 
-(set-cursor-color "DarkOrange")
+
+;; cursor color
+;;(set-cursor-color "DarkOrange")
+(setq curchg-default-cursor-color "DarkOrange")
+(setq curchg-change-cursor-on-input-method-flag +1)
+(setq curchg-input-method-cursor-color "Green")
+
 
 
 ;; リージョン指定，括弧対応に色をつける
@@ -59,9 +65,6 @@
 ;; smart mode line
 (sml/setup)
 (setq sml/theme 'dark)
-
-
-
 
 ;; TODO あんまり消えてないのでどうにかする
 (require 'diminish)
@@ -104,3 +107,4 @@
 (set-face-foreground 'git-gutter:modified "#B8BB26")
 (set-face-foreground 'git-gutter:added "#5f8787")
 (set-face-foreground 'git-gutter:deleted "#FB4934")
+
