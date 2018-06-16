@@ -27,6 +27,7 @@
 ;;(bind-key "C-q" 'helm-perspeen)
 (bind-key "C-q" 'perspeen-next-ws)
 
+(bind-key "C-S-/" 'undo-tree-redo)
 
 ;; helm
 (bind-keys

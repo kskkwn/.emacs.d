@@ -30,6 +30,10 @@
   (setq undohist-ignored-files '("/tmp" "/EDITMSG" "/elpa"))
 )
 
+;; undo tree
+(require 'undo-tree)
+(global-undo-tree-mode t)
+
 (require 'magit)
 (define-key magit-mode-map (kbd "<C-tab>") nil) ;;C-tabはウィンドウの移動に用いる
 
