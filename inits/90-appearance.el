@@ -108,3 +108,12 @@
 (set-face-foreground 'git-gutter:added "#5f8787")
 (set-face-foreground 'git-gutter:deleted "#FB4934")
 
+(setq writeroom-width 150)
+;; 上のマージンを100に設定
+(setq writeroom-border-width 100)
+
+(add-hook
+ 'writeroom-mode-hook
+ '(lambda ()
+    (linum-mode -1)
+    ))

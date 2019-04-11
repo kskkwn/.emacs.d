@@ -135,3 +135,7 @@ http://www.emacswiki.org/emacs/AlignCommands"
                   ;; add space at end of regexp
                   (concat regexp "\\([[:space:]]*\\)")
                   1 spacing t)))
+
+(setq-default ispell-program-name "aspell")
+(eval-after-load "ispell"
+ '(add-to-list 'ispell-skip-region-alist '("[^\000-\377]+")))
