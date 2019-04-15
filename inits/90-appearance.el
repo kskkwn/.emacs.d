@@ -34,11 +34,8 @@
 
 
 ;; cursor color
-;;(set-cursor-color "DarkOrange")
-(setq curchg-default-cursor-color "DarkOrange")
-(setq curchg-change-cursor-on-input-method-flag +1)
-(setq curchg-input-method-cursor-color "Green")
-
+(add-to-list 'default-frame-alist '(cursor-type . hbar))
+(set-cursor-color "DarkOrange")
 
 
 ;; リージョン指定，括弧対応に色をつける
@@ -57,9 +54,6 @@
                 t)))
   (unless result
     ))
-;; ギリシャ文字
-(set-fontset-font
- 'nil '(#x0370 . #x03FF) (font-spec :family "Ubuntu Mono" :height 100))
 
 
 ;; smart mode line
