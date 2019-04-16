@@ -34,7 +34,6 @@
 
 
 ;; cursor color
-(add-to-list 'default-frame-alist '(cursor-type . hbar))
 (set-cursor-color "DarkOrange")
 
 
@@ -50,7 +49,7 @@
 
 ;;Font設定
 (let ((result (ignore-errors
-                (set-frame-font "ricty-13.5")
+                (set-frame-font "ricty-15")
                 t)))
   (unless result
     ))
