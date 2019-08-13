@@ -13,9 +13,7 @@
 	    default-frame-alist))))
 
 ;; 行番号を表示する
-(require 'linum)
-(global-linum-mode t)      ; デフォルトで linum-mode を有効にする
-(setq linum-format "%5d ") ; 5 桁分の領域を確保して行番号のあとにスペースを入れる
+(global-display-line-numbers-mode)
 
 ;; カーソルの点滅を止める
 (blink-cursor-mode 0)
@@ -49,7 +47,7 @@
 
 ;;Font設定
 (let ((result (ignore-errors
-                (set-frame-font "ricty-15")
+                (set-frame-font "cica-15")
                 t)))
   (unless result
     ))
@@ -110,3 +108,5 @@
  '(lambda ()
     (linum-mode -1)
     ))
+
+
