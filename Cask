@@ -62,3 +62,5 @@
 
 (depends-on "atomic-chrome")
 (depends-on "undo-tree")
+
+(depends-on "powerline")

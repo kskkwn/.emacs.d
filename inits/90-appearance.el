@@ -54,10 +54,16 @@
 
 
 ;; smart mode line
-(sml/setup)
-(setq sml/theme 'dark)
+(require 'powerline)
+(setq powerline-default-separator 'contour)
+(setq ns-use-srgb-colorspace nil)
+(powerline-default-theme)
 
-;; TODO あんまり消えてないのでどうにかする
+(set-face-attribute 'powerline-active0 nil
+                    :foreground "#fff"
+                    :background "chocolate2"
+                    :inherit 'mode-line)
+
 (require 'diminish)
 (diminish 'yas-minor-mode "")
 (diminish 'paredit-mode "")
@@ -76,6 +82,9 @@
 (diminish 'emacs-lisp-mode "")
 (diminish 'company-mode)
 (diminish 'hl-line-mode "")
+(diminish 'undo-tree-mode "")
+(diminish 'highlight-parentheses-mode "")
+
 
 ;;インデントの可視化
 (setq highlight-indent-guides-method 'character)

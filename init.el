@@ -15,6 +15,9 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(company-idle-delay 0)
+ '(custom-safe-themes
+   (quote
+    ("3c83b3676d796422704082049fc38b6966bcad960f896669dfc21a7a37a748fa" default)))
  '(desktop-save-mode t)
  '(helm-mini-default-sources
    (quote
@@ -28,3 +31,4 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(perspeen-selected-face ((t (:weight bold :foreground "#ff8700")))))
+(put 'dired-find-alternate-file 'disabled nil)
