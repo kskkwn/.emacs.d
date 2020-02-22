@@ -18,12 +18,8 @@
 
 (depends-on "smartparens")
 
-(depends-on "powerline")
-(depends-on "smart-mode-line")
-
 (depends-on "diminish")
 (depends-on "popwin")
-
 
 (depends-on "magit")
 (depends-on "company")
@@ -60,7 +56,8 @@
 (depends-on "org-download")
 (depends-on "ess")
 
-(depends-on "atomic-chrome")
 (depends-on "undo-tree")
 
-(depends-on "powerline")
+(depends-on "telephone-line")
+(depends-on "rainbow-delimiters")
+(depends-on "rainbow-mode")

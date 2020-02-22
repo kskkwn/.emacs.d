@@ -1,30 +1,32 @@
 (exec-path-from-shell-initialize)
 
 ;; http://syohex.hatenablog.com/entry/20101224/1293206906
+;; start emacs with server mode
 (require 'server)
 (unless (server-running-p)
   (server-start))
 
-;; スタートページを非表示
+;; start with scratch window
 (setq inhibit-startup-message t)
 
 ;; http://yohshiy.blog.fc2.com/blog-entry-319.html
 (setq make-backup-files nil)
 (setq delete-auto-save-files t)
 
-;;ファイルを開くときに大文字小文字の違いを無視
-(setq read-buffer-completion-ignore-case t)    ;; バッファ名
-(setq read-file-name-completion-ignore-case t) ;; ファイル名
+;; open file and dir ignoring capital of not
+(setq read-buffer-completion-ignore-case t)
+(setq read-file-name-completion-ignore-case t)
 
-(fset 'yes-or-no-p 'y-or-n-p) ; 問い合わせを簡略化 yes/no を y/n
-(setq kill-whole-line t) ; C-k で行末の改行も消去
-(define-key global-map [?¥] [?\\]) ; ￥の代わりにバックスラッシュ
-(global-auto-revert-mode 1) ;バッファ自動読み込み
 
-;;コンパイル画面でスクロールする
+(fset 'yes-or-no-p 'y-or-n-p) ; yes/no -> y/n
+(setq kill-whole-line t) ; erase newlines on EOL with C-k
+(define-key global-map [?¥] [?\\]) ; use backslash instead of Japanese yen
+(global-auto-revert-mode 1)
+
+;; scroll buffer on compile window
 (setq compilation-scroll-output t)
 
-;; undoの履歴をウィンドウを閉じても保持する
+;; use undohist
 (when (require 'undohist nil t)
   (undohist-initialize)
   (setq undohist-ignored-files '("/tmp" "/EDITMSG" "/elpa"))
@@ -34,14 +36,15 @@
 (require 'undo-tree)
 (global-undo-tree-mode t)
 
+;; git mode on emacs
 (require 'magit)
-(define-key magit-mode-map (kbd "<C-tab>") nil) ;;C-tabはウィンドウの移動に用いる
+(define-key magit-mode-map (kbd "<C-tab>") nil) ;; unset magit keybind C-tab
 
-;; 対応するカッコを入れる
+;; insert pairs e.g., "()"
 (require 'smartparens-config)
 
 ;; http://qiita.com/itiut@github/items/4d74da2412a29ef59c3a
-;;保存時に行末のスペースを削除．文末の改行は削除しない
+;; erase spaces on EOF when saving
 (require 'whitespace)
 (set-face-foreground 'whitespace-space "DarkGoldenrod1")
 (set-face-background 'whitespace-space nil)
@@ -56,7 +59,7 @@
 (global-whitespace-mode 1)
 
 
-;;タブの代わりにスペースを使う。
+;; use four spaces instead of tabs
 (setq-default tab-width 4 indent-tabs-mode nil)
 
 ;; 検索時に件数を表示する
@@ -101,7 +104,7 @@
 (company-quickhelp-mode +1)
 
 
-;; perspeen
+;; perspeen mode
 (require 'perspeen)
 (perspeen-mode)
 
@@ -112,7 +115,7 @@
 
 (require 'helm-perspeen)
 
-;; 音を出さない
+;; no sound required
 (setq ring-bell-function 'ignore)
 
 ;; http://kiyotakagoto.hatenablog.com/entry/2013/06/04/003605
