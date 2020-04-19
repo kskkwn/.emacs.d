@@ -11,10 +11,7 @@
   (setq py-autopep8-options '("--max-line-length=200" "--ignore=E731"))
   (py-autopep8-enable-on-save)
 
-  ;;errorやwarningを表示する
-  (flymake-mode t)
-  (require 'flymake-python-pyflakes)
-  (flymake-python-pyflakes-load)
+  (flycheck-mode t)
   (highlight-numbers-mode t)
   (yas-global-mode 1)
   )
